@@ -127,21 +127,32 @@ import { CommonModule } from '@angular/common';
               <h3 class="bento-title">Let's Build Together</h3>
               <p class="bento-text">Have a challenging architectural problem or project in mind?</p>
               
-              <button class="copy-email-btn" (click)="copyEmail()">
-                <span *ngIf="!isCopied">
+              <div class="bento-actions">
+                <button class="copy-email-btn" (click)="copyEmail()">
+                  <span *ngIf="!isCopied">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy Primary Email</span>
+                  </span>
+                  <span *ngIf="isCopied" class="copied-feedback">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Copied to Clipboard!</span>
+                  </span>
+                </button>
+
+                <a href="Nitin_Pimpalkar_Resume.pdf" download="Nitin_Pimpalkar_Resume.pdf" target="_blank" class="download-resume-btn">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
                   </svg>
-                  <span>Copy Primary Email</span>
-                </span>
-                <span *ngIf="isCopied" class="copied-feedback">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span>Copied to Clipboard!</span>
-                </span>
-              </button>
+                  <span>Download Resume (PDF)</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -297,6 +308,14 @@ import { CommonModule } from '@angular/common';
       display: flex;
       flex-direction: column;
     }
+    .bento-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      margin-top: 12px;
+      width: 100%;
+    }
     .copy-email-btn {
       display: inline-flex;
       align-items: center;
@@ -311,12 +330,37 @@ import { CommonModule } from '@angular/common';
       font-size: 0.9rem;
       cursor: pointer;
       transition: var(--transition-smooth);
-      margin-top: 10px;
+      width: 100%;
+      max-width: 260px;
     }
     .copy-email-btn:hover {
       background: rgba(99, 102, 241, 0.15);
       border-color: var(--accent-indigo);
       transform: translateY(-2px);
+    }
+    .download-resume-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      border-radius: var(--radius-md);
+      color: #34d399;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+      width: 100%;
+      max-width: 260px;
+    }
+    .download-resume-btn:hover {
+      background: rgba(16, 185, 129, 0.22);
+      border-color: #34d399;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
     }
     .copied-feedback {
       color: var(--accent-emerald);

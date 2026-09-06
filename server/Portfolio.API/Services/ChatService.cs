@@ -43,9 +43,10 @@ public class ChatService : IChatService
         var rawMsg = request.Message?.Trim() ?? "";
         var suggestions = new List<string>
         {
+            "Can I download Nitin's Resume?",
             "What are Nitin's top skills?",
-            "Tell me about his work experience",
-            "What is his educational background?",
+            "Tell me about his current job",
+            "Show me his GitHub projects",
             "How can I contact Nitin?"
         };
 
@@ -342,7 +343,9 @@ CRITICAL INSTRUCTIONS FOR ACCURACY:
         // Resume / CV
         if (userMsg.Contains("resume") || userMsg.Contains("cv") || userMsg.Contains("biodata"))
         {
-            return "You can review Nitin's verified qualifications, projects, and work experience right here on this portfolio. To request his comprehensive resume/CV, please send a message through the Contact Form or email him directly at **nitinpimpalkar17@gmail.com**.";
+            return "You can download Nitin Pimpalkar's official Resume directly here:\n\n" +
+                   "📄 **[Download Nitin Pimpalkar Resume (PDF)](Nitin_Pimpalkar_Resume.pdf)**\n\n" +
+                   "You can also reach him directly via email at **[nitinpimpalkar17@gmail.com](mailto:nitinpimpalkar17@gmail.com)** or call/WhatsApp at **[+91 8357093103](tel:+918357093103)**.";
         }
         // C# / .NET / Backend specifics
         if (userMsg.Contains("c#") || userMsg.Contains(".net") || userMsg.Contains("dotnet") || userMsg.Contains("backend") || userMsg.Contains("sql") || userMsg.Contains("entity framework") || userMsg.Contains("api"))

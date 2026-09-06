@@ -28,6 +28,14 @@ import { CommonModule } from '@angular/common';
           <a href="#projects" class="nav-link">Projects</a>
           <a href="#experience" class="nav-link">Experience</a>
           <a href="#testimonials" class="nav-link">Reviews</a>
+          <a href="Nitin_Pimpalkar_Resume.pdf" download="Nitin_Pimpalkar_Resume.pdf" target="_blank" class="nav-link nav-resume-btn" title="Download Nitin's Resume">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Resume</span>
+          </a>
           <a href="#contact" class="nav-link nav-contact-btn">
             <span>Connect</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -54,6 +62,7 @@ import { CommonModule } from '@angular/common';
         <a href="#projects" (click)="closeMobileMenu()" class="mobile-link">Projects</a>
         <a href="#experience" (click)="closeMobileMenu()" class="mobile-link">Experience</a>
         <a href="#testimonials" (click)="closeMobileMenu()" class="mobile-link">Reviews</a>
+        <a href="Nitin_Pimpalkar_Resume.pdf" download="Nitin_Pimpalkar_Resume.pdf" target="_blank" (click)="closeMobileMenu()" class="mobile-link mobile-resume">📄 Download Resume (PDF)</a>
         <a href="#contact" (click)="closeMobileMenu()" class="mobile-link mobile-contact">Get In Touch</a>
       </div>
     </header>
@@ -153,6 +162,22 @@ import { CommonModule } from '@angular/common';
       transform: translateY(-1px);
       box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
     }
+    .nav-resume-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399 !important;
+      font-weight: 600;
+    }
+    .nav-resume-btn:hover {
+      background: rgba(16, 185, 129, 0.22);
+      border-color: #34d399;
+      color: #ffffff !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+    }
     .mobile-toggle {
       display: none;
       background: none;
@@ -202,6 +227,10 @@ import { CommonModule } from '@angular/common';
     }
     .mobile-link:hover {
       color: var(--text-primary);
+    }
+    .mobile-resume {
+      color: #34d399;
+      font-weight: 600;
     }
     .mobile-contact {
       color: var(--accent-indigo);

@@ -480,9 +480,9 @@ export class ChatbotComponent {
   isTyping = false;
 
   suggestedQuestions: string[] = [
+    "Can I download Nitin's Resume?",
     "What are Nitin's top skills?",
-    "Tell me about his work experience",
-    "What is his educational background?",
+    "Tell me about his current job",
     "Show me his GitHub projects",
     "How can I contact Nitin?"
   ];
@@ -548,9 +548,13 @@ export class ChatbotComponent {
       error: () => {
         this.ngZone.run(() => {
           this.isTyping = false;
+          let fallbackText = "Nitin Pimpalkar is a Junior Software Developer at ThinkerSteps Technologies Pvt. Ltd. based in Nagpur, India (B.Tech '24 graduate) specializing in C#, ASP.NET Core, and SQL Server. You can contact him directly at [nitinpimpalkar17@gmail.com](mailto:nitinpimpalkar17@gmail.com) or download his [Resume PDF](Nitin_Pimpalkar_Resume.pdf)!";
+          if (text.toLowerCase().includes('resume') || text.toLowerCase().includes('cv')) {
+            fallbackText = "📄 You can download Nitin's official Resume directly here: [Download Nitin Pimpalkar Resume (PDF)](Nitin_Pimpalkar_Resume.pdf) — Or reach him at [nitinpimpalkar17@gmail.com](mailto:nitinpimpalkar17@gmail.com).";
+          }
           this.messages.push({
             sender: 'bot',
-            text: "Nitin Pimpalkar is a Junior Software Developer at ThinkerSteps Technologies Pvt. Ltd. based in Nagpur, India (B.Tech '24 graduate) specializing in C#, ASP.NET Core, and SQL Server. You can contact him directly at nitinpimpalkar17@gmail.com!",
+            text: fallbackText,
             timestamp: this.getNow()
           });
           this.cdr.detectChanges();

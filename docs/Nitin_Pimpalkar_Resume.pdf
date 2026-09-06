@@ -1,0 +1,159 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 6069 >>
+stream
+0.05 0.08 0.16 rg
+0.00 731.89 595.28 110.00 re f
+0.39 0.4 0.95 rg
+0.00 727.89 595.28 4.00 re f
+1 1 1 rg
+BT /F2 24 Tf 40.00 796.89 Td (NITIN PIMPALKAR) Tj ET
+0.22 0.74 0.97 rg
+BT /F2 12 Tf 40.00 776.89 Td (Junior Software Developer | ASP.NET Core & C# Specialist) Tj ET
+0.8 0.85 0.95 rg
+BT /F1 9.5 Tf 40.00 756.89 Td (Nagpur, Maharashtra, India  |  +91 8357093103  |  nitinpimpalkar17@gmail.com) Tj ET
+0.8 0.85 0.95 rg
+BT /F1 9.5 Tf 40.00 743.89 Td (GitHub: github.com/NitinPim  |  LinkedIn: linkedin.com/in/nitin-pimpalkar) Tj ET
+0.39 0.4 0.95 rg
+40.00 699.89 6.00 14.00 re f
+0.08 0.12 0.25 rg
+BT /F2 12 Tf 52.00 701.89 Td (PROFESSIONAL SUMMARY) Tj ET
+1 w 0.85 0.88 0.93 RG
+52.00 697.89 m 555.28 697.89 l S
+0.2 0.25 0.35 rg
+BT /F1 9.5 Tf 40.00 683.89 Td (Results-driven Junior Software Developer specializing in C#, ASP.NET Core, Entity Framework Core, and SQL Server.) Tj ET
+0.2 0.25 0.35 rg
+BT /F1 9.5 Tf 40.00 670.89 Td (Passionate about building scalable backend RESTful APIs, high-performance database architectures, and clean responsive UI.) Tj ET
+0.2 0.25 0.35 rg
+BT /F1 9.5 Tf 40.00 657.89 Td (B.Tech 2024 engineering graduate with hands-on industry experience delivering enterprise software solutions.) Tj ET
+0.39 0.4 0.95 rg
+40.00 635.89 6.00 14.00 re f
+0.08 0.12 0.25 rg
+BT /F2 12 Tf 52.00 637.89 Td (TECHNICAL SKILLS) Tj ET
+1 w 0.85 0.88 0.93 RG
+52.00 633.89 m 555.28 633.89 l S
+0.1 0.1 0.15 rg
+BT /F2 9.5 Tf 40.00 619.89 Td (Backend & APIs:) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9.5 Tf 145.00 619.89 Td (C#, ASP.NET Core, .NET Framework, Entity Framework Core, RESTful APIs, LINQ, Web API) Tj ET
+0.1 0.1 0.15 rg
+BT /F2 9.5 Tf 40.00 606.89 Td (Database Systems:) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9.5 Tf 145.00 606.89 Td (Microsoft SQL Server, T-SQL, Query Optimization, Indexing, Schema Design) Tj ET
+0.1 0.1 0.15 rg
+BT /F2 9.5 Tf 40.00 593.89 Td (Frontend & Web:) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9.5 Tf 145.00 593.89 Td (Angular 19, TypeScript, JavaScript, HTML5, CSS3, Bootstrap 5, Responsive Design) Tj ET
+0.1 0.1 0.15 rg
+BT /F2 9.5 Tf 40.00 580.89 Td (Methodologies & Tools:) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9.5 Tf 145.00 580.89 Td (Clean Architecture, Object-Oriented Programming \(OOP\), SOLID, Git, GitHub, SSMS, Postman) Tj ET
+0.39 0.4 0.95 rg
+40.00 558.89 6.00 14.00 re f
+0.08 0.12 0.25 rg
+BT /F2 12 Tf 52.00 560.89 Td (WORK EXPERIENCE) Tj ET
+1 w 0.85 0.88 0.93 RG
+52.00 556.89 m 555.28 556.89 l S
+0.08 0.12 0.25 rg
+BT /F2 10.5 Tf 40.00 542.89 Td (ThinkerSteps Technologies Pvt. Ltd.) Tj ET
+0.4 0.45 0.55 rg
+BT /F2 9.5 Tf 445.28 542.89 Td (Jul 2026 - Present | Nagpur) Tj ET
+0.39 0.4 0.95 rg
+BT /F2 9.5 Tf 40.00 529.89 Td (Junior Software Developer \(Full-time\)) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 50.00 517.89 Td (- Developing and maintaining enterprise RESTful Web APIs utilizing ASP.NET Core and C#.) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 50.00 506.89 Td (- Designing relational schemas and writing optimized queries and stored procedures in Microsoft SQL Server.) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 50.00 495.89 Td (- Implementing Clean Architecture, dependency injection, and Entity Framework Core repository mappings.) Tj ET
+0.08 0.12 0.25 rg
+BT /F2 10.5 Tf 40.00 477.89 Td (TheThiinker) Tj ET
+0.4 0.45 0.55 rg
+BT /F2 9.5 Tf 445.28 477.89 Td (Jul 2025 - Jun 2026 | Nagpur) Tj ET
+0.39 0.4 0.95 rg
+BT /F2 9.5 Tf 40.00 464.89 Td (Trainee \(Apprenticeship\)) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 50.00 452.89 Td (- Engineered full-stack modules using .NET Framework, ASP.NET Core, and Microsoft SQL Server.) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 50.00 441.89 Td (- Built pixel-perfect responsive user interfaces with JavaScript, HTML5, CSS3, and Bootstrap.) Tj ET
+0.08 0.12 0.25 rg
+BT /F2 10.5 Tf 40.00 423.89 Td (TheThiinker) Tj ET
+0.4 0.45 0.55 rg
+BT /F2 9.5 Tf 445.28 423.89 Td (Jan 2025 - Jun 2025 | Nagpur) Tj ET
+0.39 0.4 0.95 rg
+BT /F2 9.5 Tf 40.00 410.89 Td (Dotnet Developer \(Internship\)) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 50.00 398.89 Td (- Developed backend REST APIs, implemented database operations, and collaborated in agile sprints with Git.) Tj ET
+0.39 0.4 0.95 rg
+40.00 376.89 6.00 14.00 re f
+0.08 0.12 0.25 rg
+BT /F2 12 Tf 52.00 378.89 Td (FEATURED PROJECTS \(GITHUB: GITHUB.COM/NITINPIM\)) Tj ET
+1 w 0.85 0.88 0.93 RG
+52.00 374.89 m 555.28 374.89 l S
+0.1 0.1 0.15 rg
+BT /F2 9.5 Tf 40.00 360.89 Td (1. .NET Core Enterprise Web API) Tj ET
+0.4 0.45 0.55 rg
+BT /F1 8.5 Tf 230.00 360.89 Td ([C#, ASP.NET Core, EF Core, SQL Server]) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 50.00 348.89 Td (   Robust backend architecture with clean repository patterns, secure CRUD endpoints, and Swagger docs.) Tj ET
+0.1 0.1 0.15 rg
+BT /F2 9.5 Tf 40.00 334.89 Td (2. JobBoard Career & Recruitment Portal) Tj ET
+0.4 0.45 0.55 rg
+BT /F1 8.5 Tf 230.00 334.89 Td ([JavaScript, HTML5, CSS3, Responsive Design]) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 50.00 322.89 Td (   Dynamic portal empowering job seekers to browse openings, filter criteria, and apply seamlessly.) Tj ET
+0.1 0.1 0.15 rg
+BT /F2 9.5 Tf 40.00 308.89 Td (3. Paytm Digital Wallet UI Clone) Tj ET
+0.4 0.45 0.55 rg
+BT /F1 8.5 Tf 230.00 308.89 Td ([HTML5, CSS3, Bootstrap 5, Flexbox]) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 50.00 296.89 Td (   Responsive fintech interface featuring mobile recharge, wallet transactions, and accessible UX.) Tj ET
+0.39 0.4 0.95 rg
+40.00 276.89 6.00 14.00 re f
+0.08 0.12 0.25 rg
+BT /F2 12 Tf 52.00 278.89 Td (EDUCATION) Tj ET
+1 w 0.85 0.88 0.93 RG
+52.00 274.89 m 555.28 274.89 l S
+0.1 0.1 0.15 rg
+BT /F2 10 Tf 40.00 260.89 Td (Bachelor of Technology \(BTech\) in Electronics & Telecommunication) Tj ET
+0.4 0.45 0.55 rg
+BT /F2 9.5 Tf 455.28 260.89 Td (Sep 2021 - Sep 2024) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 40.00 248.89 Td (RTMNU \(Rashtrasant Tukadoji Maharaj Nagpur University\) / Priyadarshini College of Eng.  |  Grade: A) Tj ET
+0.1 0.1 0.15 rg
+BT /F2 10 Tf 40.00 232.89 Td (Diploma of Education in Electronics & Telecommunication) Tj ET
+0.4 0.45 0.55 rg
+BT /F2 9.5 Tf 455.28 232.89 Td (Jun 2019 - Aug 2021) Tj ET
+0.1 0.1 0.15 rg
+BT /F1 9 Tf 40.00 220.89 Td (NIT Polytechnic Nagpur  |  Grade: A+) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000257 00000 n 
+0000006378 00000 n 
+0000006448 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+6523
+%%EOF
