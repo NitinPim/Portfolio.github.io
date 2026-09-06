@@ -22,13 +22,27 @@ export class PortfolioService {
       email: 'nitinpimpalkar17@gmail.com',
       gitHub: 'https://github.com/NitinPim',
       linkedIn: 'https://www.linkedin.com/in/nitin-pimpalkar-45a401220/',
-      degree: 'BTech in Electronics & Telecommunication (RTMNU, Grade A)',
-      completedProjects: 15,
+      degree: 'B.E. in Electronics & Telecommunication (Priyadarshini College, Grade A)',
+      completedProjects: 16,
       codeCommits: '500+'
     },
     projects: [
       {
         id: 1,
+        title: 'Dynamic User Data Management',
+        tagline: 'Enterprise Web App for Maharashtra Village Data & Product Reviews',
+        description: 'Scalable web application for managing Maharashtra village data and user product reviews. Implemented full CRUD operations, advanced search filters improving retrieval speed by 25%, and secure photo upload functionality.',
+        category: 'ASP.NET MVC / Backend',
+        techStack: 'ASP.NET MVC, C#, Entity Framework, LINQ, SQL Server, JavaScript, jQuery',
+        architectureNotes: 'Engineered with clean MVC separation, LINQ queries, optimized relational schema, and secure file handling.',
+        liveUrl: 'https://github.com/NitinPim',
+        githubUrl: 'https://github.com/NitinPim',
+        imageUrl: '',
+        displayOrder: 1,
+        isFeatured: true
+      },
+      {
+        id: 2,
         title: '.NET Core Enterprise Web API',
         tagline: 'High-Performance RESTful Backend Engine with C# & SQL Server',
         description: 'Scalable backend RESTful Web API built with C#, ASP.NET Core, and Entity Framework Core. Features repository architecture, secure CRUD endpoints, MS SQL Server relational database integration, and Swagger documentation.',
@@ -38,11 +52,25 @@ export class PortfolioService {
         liveUrl: 'https://github.com/NitinPim/Project.NetCoreWebApi',
         githubUrl: 'https://github.com/NitinPim/Project.NetCoreWebApi',
         imageUrl: '',
-        displayOrder: 1,
+        displayOrder: 2,
         isFeatured: true
       },
       {
-        id: 2,
+        id: 3,
+        title: 'Online Quiz Maker & Evaluator',
+        tagline: 'Interactive Educational Assessment & Dynamic Scoring System',
+        description: 'Interactive web application featuring custom quiz generation, responsive layouts, dynamic question navigation, and real-time score evaluation.',
+        category: 'Interactive Web App',
+        techStack: 'HTML5, CSS3, Bootstrap 5, JavaScript',
+        architectureNotes: 'Stateful quiz evaluation engine with dynamic timer countdown, client-side score tracking, and instant answer verification.',
+        liveUrl: 'https://nitinpim.github.io/OnlineQuizMaker.github.io/',
+        githubUrl: 'https://github.com/NitinPim/OnlineQuizMaker.github.io',
+        imageUrl: '',
+        displayOrder: 3,
+        isFeatured: true
+      },
+      {
+        id: 4,
         title: 'JobBoard Career & Recruitment Portal',
         tagline: 'Responsive Job Search, Filtering & Application Platform',
         description: 'Dynamic employment portal that empowers job seekers to search, filter openings by technology/location, examine role criteria, and apply seamlessly with modern responsive interface design.',
@@ -52,11 +80,25 @@ export class PortfolioService {
         liveUrl: 'https://nitinpim.github.io/JobBoard.github.io/',
         githubUrl: 'https://github.com/NitinPim/JobBoard.github.io',
         imageUrl: '',
-        displayOrder: 2,
+        displayOrder: 4,
         isFeatured: true
       },
       {
-        id: 3,
+        id: 5,
+        title: 'Netflix UI Experience Clone',
+        tagline: 'Entertainment Streaming Platform Component Interface',
+        description: 'Netflix UI clone built with HTML, CSS, Bootstrap, and JavaScript, emphasizing modern responsive hero banners, multi-device media grids, and interactive styling.',
+        category: 'Frontend / UI',
+        techStack: 'HTML5, CSS3, Bootstrap 5, JavaScript, Responsive UX',
+        architectureNotes: 'Component-driven streaming UI layout, responsive media query breakpoints, and polished entertainment aesthetic.',
+        liveUrl: 'https://github.com/NitinPim',
+        githubUrl: 'https://github.com/NitinPim',
+        imageUrl: '',
+        displayOrder: 5,
+        isFeatured: false
+      },
+      {
+        id: 6,
         title: 'Paytm Digital Wallet UI Clone',
         tagline: 'Fintech & Digital Payments Interface Clone',
         description: 'Pixel-perfect, modern responsive clone of the Paytm digital payment ecosystem. Features recharge menus, wallet transaction layouts, and mobile-friendly responsive components.',
@@ -66,52 +108,35 @@ export class PortfolioService {
         liveUrl: 'https://nitinpim.github.io/PaytmClone.github.io/',
         githubUrl: 'https://github.com/NitinPim/PaytmClone.github.io',
         imageUrl: '',
-        displayOrder: 3,
-        isFeatured: true
-      },
-      {
-        id: 4,
-        title: 'Online Quiz Maker & Evaluator',
-        tagline: 'Interactive Educational Assessment & Dynamic Scoring System',
-        description: 'Interactive web application featuring custom quiz generation, timed question navigation, automatic score computation, and real-time result analysis.',
-        category: 'Interactive Web App',
-        techStack: 'JavaScript, HTML5, CSS3, DOM Manipulation, LocalStorage',
-        architectureNotes: 'Stateful quiz evaluation engine with dynamic timer countdown, client-side score tracking, and instant answer verification.',
-        liveUrl: 'https://nitinpim.github.io/OnlineQuizMaker.github.io/',
-        githubUrl: 'https://github.com/NitinPim/OnlineQuizMaker.github.io',
-        imageUrl: '',
-        displayOrder: 4,
-        isFeatured: true
-      },
-      {
-        id: 5,
-        title: 'Food Express & Pizza Delivery',
-        tagline: 'Interactive Online Food Ordering & Cart Management Portal',
-        description: 'Responsive food delivery web application featuring category browsing, dynamic shopping cart calculation, customizable toppings, and order summary checkout.',
-        category: 'Web Application',
-        techStack: 'JavaScript, HTML5, CSS3, Cart State Engine',
-        architectureNotes: 'Reactive cart state handling, dynamic pricing calculation, and clean UX feedback loops.',
-        liveUrl: 'https://nitinpim.github.io/PizzaDeliveryWebsite.github.io/',
-        githubUrl: 'https://github.com/NitinPim/PizzaDeliveryWebsite.github.io',
-        imageUrl: '',
-        displayOrder: 5,
+        displayOrder: 6,
         isFeatured: false
       }
     ],
     experiences: [
       {
         id: 1,
+        role: '.Net Developer Intern',
+        company: 'Hesten Solution Pvt. Ltd.',
+        location: 'Nagpur, Maharashtra, India',
+        period: 'Apr 2024 - Oct 2024',
+        description: 'Engineered robust backend and frontend web modules with C#, ASP.NET Core, ASP.NET MVC, and Microsoft SQL Server.',
+        highlights: 'Developed responsive UI using HTML, CSS, and Bootstrap, enhancing user experience and accessibility|Engineered a Product Review System with C#, ASP.NET MVC, SQL, and jQuery, increasing user engagement by 30%|Designed a Nutraceutical Product Page, ensuring accurate product information and seamless usability|Built RESTful APIs with ASP.NET Core, optimizing data retrieval for Gold & Silver products via SQL Server stored procedures, reducing query execution time by 40%',
+        techStack: 'C#, ASP.NET Core, ASP.NET MVC, Microsoft SQL Server, Stored Procedures, Entity Framework, jQuery, Bootstrap',
+        order: 1
+      },
+      {
+        id: 2,
         role: 'Junior Software Developer',
-        company: 'ThinkerSteps Technologies Pvt. Ltd. • Full-time',
+        company: 'ThinkerSteps Technologies Pvt. Ltd.',
         location: 'Nagpur, Maharashtra, India • On-site',
         period: 'Jul 2026 - Present',
         description: 'Developing and maintaining scalable enterprise solutions with ASP.NET Core, C#, and SQL Server. Designing RESTful Web APIs, optimizing database operations with Entity Framework Core, and building responsive client modules.',
         highlights: 'Building robust REST APIs with ASP.NET Core and Entity Framework Core|Optimizing Microsoft SQL Server relational schema, stored procedures, and queries|Integrating clean software design principles and OOP paradigms into enterprise applications',
         techStack: 'C#, ASP.NET Core, SQL Server, Entity Framework Core, REST APIs, Git, GitHub',
-        order: 1
+        order: 2
       },
       {
-        id: 2,
+        id: 3,
         role: 'Trainee (Apprenticeship)',
         company: 'TheThiinker',
         location: 'Nagpur, Maharashtra, India • On-site',
@@ -119,50 +144,49 @@ export class PortfolioService {
         description: 'Worked on full-stack .NET web applications, database schema designs, and frontend integration using modern web standards and object-oriented programming.',
         highlights: 'Engineered core backend modules using .NET Framework and ASP.NET Core|Implemented database migrations and relationship mappings with Entity Framework|Developed dynamic web UI interfaces using JavaScript, CSS3, and Bootstrap',
         techStack: 'ASP.NET, .NET Core, SQL Server, Entity Framework, JavaScript, HTML5/CSS3, Bootstrap',
-        order: 2
-      },
-      {
-        id: 3,
-        role: 'Dotnet Developer (Internship)',
-        company: 'TheThiinker',
-        location: 'Nagpur, Maharashtra, India • On-site',
-        period: 'Jan 2025 - Jun 2025 (6 mos)',
-        description: 'Hands-on development of .NET components, REST API endpoints, control systems logic, and database queries in an agile collaborative team.',
-        highlights: 'Developed scalable REST API endpoints and data access layers with Entity Framework|Implemented OOP design patterns and clean code standards|Utilized Git and GitHub for team version control and sprint task tracking',
-        techStack: 'C#, .NET, Microsoft SQL Server, REST APIs, Software Design, OOP, Git',
         order: 3
       }
     ],
     educations: [
       {
         id: 1,
-        institution: 'Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU)',
-        degree: 'Bachelor of Technology - BTech',
-        fieldOfStudy: 'Electronic and Telecommunication',
-        period: 'Sep 2021 - Sep 2024',
-        grade: 'Grade: A',
-        skills: 'Software Engineering, Control Systems, Relational Databases, Algorithms',
+        institution: 'Priyadarshini College of Engineering, Nagpur',
+        degree: 'Bachelor of Engineering (B.E. / B.Tech)',
+        fieldOfStudy: 'Electronics and Telecommunication Engineering',
+        period: 'Jul 2021 - Jun 2024',
+        grade: 'Graduated (Grade: A)',
+        skills: 'C#, ASP.NET Core, Relational Databases, Algorithms, Software Engineering',
         order: 1
       },
       {
         id: 2,
-        institution: 'Priyadarshini College of Engineering Nagpur',
-        degree: 'B.Tech Engineering Coursework',
-        fieldOfStudy: 'Electronics and Telecommunication Engineering',
-        period: 'Dec 2021 - May 2024',
-        grade: 'Engineering Graduate',
-        skills: 'HTML, Cascading Style Sheets (CSS), C#, ASP.NET',
+        institution: 'NIT Polytechnic, Nagpur',
+        degree: 'Polytechnic Diploma',
+        fieldOfStudy: 'Electronics and Telecommunication',
+        period: 'Jul 2019 - May 2021',
+        grade: 'Grade: A+',
+        skills: 'Programming Foundations, Electronics, Web Development',
         order: 2
       },
       {
         id: 3,
-        institution: 'NIT Polytechnic Nagpur',
-        degree: 'Diploma of Education',
-        fieldOfStudy: 'Electronics and Telecommunication',
-        period: 'Jun 2019 - Aug 2021',
-        grade: 'Grade: A+',
-        skills: 'HTML, CSS, Programming Fundamentals, Electronics',
+        institution: 'Balaji Junior College, Nagpur',
+        degree: 'Higher Secondary Certificate (HSC)',
+        fieldOfStudy: 'Science & Mathematics',
+        period: 'Jun 2017 - May 2019',
+        grade: 'Completed',
+        skills: 'Mathematics, Physics, Computer Science',
         order: 3
+      },
+      {
+        id: 4,
+        institution: 'Holy Cross English Medium High School, Nagpur',
+        degree: 'Secondary School Certificate (SSC)',
+        fieldOfStudy: 'General Academics & Sciences',
+        period: 'Completed May 2017',
+        grade: 'Completed',
+        skills: 'Core Sciences, Mathematics, English',
+        order: 4
       }
     ],
     testimonials: [

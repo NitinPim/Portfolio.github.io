@@ -113,23 +113,27 @@ Nitin Pimpalkar's Verified Profile Facts:
 - Full Name: Nitin Pimpalkar
 - Age: Approx 22-23 years old (Graduated B.Tech in 2024).
 - Current Position: Junior Software Developer at ThinkerSteps Technologies Pvt. Ltd., Nagpur, Maharashtra, India (July 2026 - Present).
-- Previous Experience:
-  1. Trainee (Apprenticeship) at TheThiinker, Nagpur (July 2025 - June 2026, 1 year). Developed full-stack web modules with .NET Framework, ASP.NET Core, SQL Server, and frontend technologies.
-  2. Dotnet Developer (Internship) at TheThiinker, Nagpur (January 2025 - June 2025, 6 months). Backend REST APIs and relational database operations.
+- Previous Experience & Internships:
+  1. .Net Developer Intern at Hesten Solution Pvt. Ltd., Nagpur, India (April 2024 - October 2024). Developed responsive UI with HTML/CSS/Bootstrap, engineered a Product Review System with C#/ASP.NET MVC/SQL/jQuery (increased engagement by 30%), designed Nutraceutical Product Page, built RESTful APIs with ASP.NET Core optimizing Gold & Silver products data retrieval via SQL Server stored procedures (reduced query execution time by 40%).
+  2. Trainee (Apprenticeship) at TheThiinker, Nagpur (July 2025 - June 2026, 1 year). Developed full-stack web modules with .NET Framework, ASP.NET Core, SQL Server, and frontend technologies.
+  3. Dotnet Developer (Internship) at TheThiinker, Nagpur (January 2025 - June 2025, 6 months). Backend REST APIs and relational database operations.
 - Education:
-  1. Bachelor of Technology (BTech) in Electronics & Telecommunication, RTMNU (Rashtrasant Tukadoji Maharaj Nagpur University) / Priyadarshini College of Engineering Nagpur (2021 - 2024), Grade: A.
-  2. Diploma of Education in Electronics & Telecommunication, NIT Polytechnic Nagpur (2019 - 2021), Grade: A+.
+  1. Bachelor of Engineering (B.E. / B.Tech) in Electronics & Telecommunication, Priyadarshini College of Engineering, Nagpur (July 2021 - June 2024), Grade: A.
+  2. Polytechnic Diploma in Electronics & Telecommunication, NIT Polytechnic Nagpur (July 2019 - May 2021), Grade: A+.
+  3. HSC (Higher Secondary Certificate), Balaji Junior College, Nagpur (June 2017 - May 2019).
+  4. SSC (Secondary School Certificate), Holy Cross English Medium High School, Nagpur (May 2017).
 - Technical Stack & Skills:
-  - Backend: C#, ASP.NET Core, .NET Framework, Entity Framework Core, RESTful APIs, Clean Architecture, OOP, SOLID.
-  - Database: Microsoft SQL Server, T-SQL, query optimization, indexing, relational schema design.
-  - Frontend: Angular 19, TypeScript, JavaScript, HTML5, CSS3, Bootstrap.
+  - Backend: C#, ASP.NET Core, ASP.NET MVC, .NET Framework, Entity Framework Core, RESTful APIs, LINQ, Clean Architecture, OOP, SOLID.
+  - Database: Microsoft SQL Server, T-SQL, Stored Procedures, query optimization, indexing, relational schema design.
+  - Frontend: Angular 19, TypeScript, JavaScript, jQuery, HTML5, CSS3, Bootstrap 5.
   - Tools & VCS: Git, GitHub, Visual Studio, VS Code, Postman, SQL Server Management Studio (SSMS).
-- Nitin's Authentic GitHub Projects:
-  1. .NET Core Enterprise Web API (C#, ASP.NET Core, Entity Framework Core, SQL Server - https://github.com/NitinPim/Project.NetCoreWebApi)
-  2. JobBoard Career & Recruitment Portal (JavaScript, HTML5, CSS3 - https://nitinpim.github.io/JobBoard.github.io/)
-  3. Paytm Digital Wallet UI Clone (HTML5, CSS3, Bootstrap 5 - https://nitinpim.github.io/PaytmClone.github.io/)
-  4. Online Quiz Maker & Evaluator (JavaScript, HTML5, CSS3 - https://nitinpim.github.io/OnlineQuizMaker.github.io/)
-  5. Food Express & Pizza Delivery (JavaScript, HTML5, CSS3 - https://nitinpim.github.io/PizzaDeliveryWebsite.github.io/)
+- Nitin's Authentic Projects:
+  1. Dynamic User Data Management Application (ASP.NET MVC, C#, Entity Framework, LINQ, SQL Server, jQuery - manages Maharashtra village data & product reviews, CRUD, 25% faster search filters, photo upload)
+  2. .NET Core Enterprise Web API (C#, ASP.NET Core, Entity Framework Core, SQL Server - https://github.com/NitinPim/Project.NetCoreWebApi)
+  3. Online Quiz Maker & Evaluator (HTML5, CSS3, Bootstrap 5, JavaScript - https://nitinpim.github.io/OnlineQuizMaker.github.io/)
+  4. Netflix UI Experience Clone (HTML5, CSS3, Bootstrap 5, JavaScript)
+  5. JobBoard Career & Recruitment Portal (JavaScript, HTML5, CSS3 - https://nitinpim.github.io/JobBoard.github.io/)
+  6. Paytm Digital Wallet UI Clone (HTML5, CSS3, Bootstrap 5 - https://nitinpim.github.io/PaytmClone.github.io/)
 - Contact & Links:
   - Phone / WhatsApp: +91-8357093103
   - Email: nitinpimpalkar17@gmail.com
@@ -301,11 +305,13 @@ CRITICAL INSTRUCTIONS FOR ACCURACY:
                    "   • Developing robust RESTful Web APIs with ASP.NET Core & C#.\n" +
                    "   • Optimizing SQL Server database queries and Entity Framework Core mappings.\n" +
                    "   • Implementing clean software design patterns and OOP paradigms.\n\n" +
-                   "2. **Trainee (Apprenticeship)** — *TheThiinker* (Jul 2025 – Jun 2026, 1 yr, Nagpur, India):\n" +
+                   "2. **.Net Developer Intern** — *Hesten Solution Pvt. Ltd.* (Apr 2024 – Oct 2024, Nagpur, India):\n" +
+                   "   • Built RESTful APIs with ASP.NET Core, optimizing Gold & Silver products data retrieval via SQL Server stored procedures (reduced query execution time by 40%).\n" +
+                   "   • Engineered a Product Review System with C#, ASP.NET MVC, SQL, and jQuery, increasing user engagement by 30%.\n" +
+                   "   • Developed responsive UI using HTML, CSS, and Bootstrap, and designed Nutraceutical Product Page.\n\n" +
+                   "3. **Trainee (Apprenticeship)** — *TheThiinker* (Jul 2025 – Jun 2026, 1 yr, Nagpur, India):\n" +
                    "   • Developed full-stack modules using .NET Framework, ASP.NET Core, and SQL Server.\n" +
-                   "   • Created responsive web pages with JavaScript, HTML5, CSS3, and Bootstrap.\n\n" +
-                   "3. **Dotnet Developer (Internship)** — *TheThiinker* (Jan 2025 – Jun 2025, 6 mos, Nagpur, India):\n" +
-                   "   • Built backend REST APIs, implemented database operations, and collaborated in an agile team using Git/GitHub.";
+                   "   • Created responsive web pages with JavaScript, HTML5, CSS3, and Bootstrap.";
         }
         // Projects / Portfolio / Code / GitHub / Repos
         if (userMsg.Contains("project") || userMsg.Contains("built") || userMsg.Contains("github") || userMsg.Contains("portfolio") || userMsg.Contains("work sample"))
