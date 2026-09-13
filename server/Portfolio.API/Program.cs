@@ -60,9 +60,7 @@ using (var scope = app.Services.CreateScope())
 
 // Configure HTTP Pipeline
 if (app.Environment.IsDevelopment())
-{
     app.MapOpenApi();
-}
 
 app.UseCors("AllowAll");
 
