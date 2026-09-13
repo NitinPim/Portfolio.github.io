@@ -15,9 +15,10 @@ public class ExperiencesController : BaseApiController
     }
 
     /// <summary>
-    /// Retrieves full career experience timeline wrapped in the common ApiResponse model.
+    /// Retrieves full career experience timeline with client/edge HTTP caching (5 min).
     /// </summary>
     [HttpGet]
+    [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Any, NoStore = false)]
     [ProducesResponseType(typeof(ApiResponse<IEnumerable<Experience>>), StatusCodes.Status200OK)]
     public async Task<ActionResult<ApiResponse<IEnumerable<Experience>>>> GetAll()
     {

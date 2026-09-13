@@ -17,9 +17,10 @@ public class PortfolioController : BaseApiController
     }
 
     /// <summary>
-    /// Retrieves the entire aggregate portfolio payload wrapped in the common ApiResponse model.
+    /// Retrieves the entire aggregate portfolio payload with client/edge HTTP caching (5 min).
     /// </summary>
     [HttpGet("all")]
+    [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Any, NoStore = false)]
     [ProducesResponseType(typeof(ApiResponse<PortfolioAggregateDto>), StatusCodes.Status200OK)]
     public async Task<ActionResult<ApiResponse<PortfolioAggregateDto>>> GetAll()
     {

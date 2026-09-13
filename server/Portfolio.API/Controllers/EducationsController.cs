@@ -15,9 +15,10 @@ public class EducationsController : BaseApiController
     }
 
     /// <summary>
-    /// Retrieves educational background records wrapped in the common ApiResponse model.
+    /// Retrieves educational background records with client/edge HTTP caching (5 min).
     /// </summary>
     [HttpGet]
+    [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Any, NoStore = false)]
     [ProducesResponseType(typeof(ApiResponse<IEnumerable<Education>>), StatusCodes.Status200OK)]
     public async Task<ActionResult<ApiResponse<IEnumerable<Education>>>> GetAll()
     {

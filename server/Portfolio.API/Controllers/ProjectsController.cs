@@ -15,9 +15,10 @@ public class ProjectsController : BaseApiController
     }
 
     /// <summary>
-    /// Retrieves all showcase projects wrapped in the common ApiResponse model.
+    /// Retrieves all showcase projects with client/edge HTTP caching (5 min).
     /// </summary>
     [HttpGet]
+    [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Any, NoStore = false)]
     [ProducesResponseType(typeof(ApiResponse<IEnumerable<Project>>), StatusCodes.Status200OK)]
     public async Task<ActionResult<ApiResponse<IEnumerable<Project>>>> GetAll()
     {
@@ -26,9 +27,10 @@ public class ProjectsController : BaseApiController
     }
 
     /// <summary>
-    /// Retrieves a single project by its unique identifier.
+    /// Retrieves a single project by its unique identifier with client/edge HTTP caching (5 min).
     /// </summary>
     [HttpGet("{id:int}")]
+    [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Any, NoStore = false)]
     [ProducesResponseType(typeof(ApiResponse<Project>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ApiResponse<Project>), StatusCodes.Status404NotFound)]
     public async Task<ActionResult<ApiResponse<Project>>> GetById(int id)

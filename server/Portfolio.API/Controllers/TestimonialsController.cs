@@ -15,9 +15,10 @@ public class TestimonialsController : BaseApiController
     }
 
     /// <summary>
-    /// Retrieves client and colleague recommendations wrapped in the common ApiResponse model.
+    /// Retrieves client and colleague recommendations with client/edge HTTP caching (5 min).
     /// </summary>
     [HttpGet]
+    [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Any, NoStore = false)]
     [ProducesResponseType(typeof(ApiResponse<IEnumerable<Testimonial>>), StatusCodes.Status200OK)]
     public async Task<ActionResult<ApiResponse<IEnumerable<Testimonial>>>> GetAll()
     {

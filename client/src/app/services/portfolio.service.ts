@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError, map, timeout } from 'rxjs/operators';
+import { catchError, map, timeout, shareReplay } from 'rxjs/operators';
 import { PortfolioData, ContactRequest, ContactResponse } from '../models/portfolio.models';
 
 @Injectable({
@@ -10,6 +10,7 @@ import { PortfolioData, ContactRequest, ContactResponse } from '../models/portfo
 export class PortfolioService {
   private http = inject(HttpClient);
   private apiUrl = 'http://localhost:5000/api';
+  private portfolioData$?: Observable<PortfolioData>;
 
   // Fallback initial data ensuring zero downtime
   private defaultData: PortfolioData = {
@@ -220,18 +221,22 @@ export class PortfolioService {
     ]
   };
 
-  getPortfolioData(): Observable<PortfolioData> {
-    return this.http.get<any>(`${this.apiUrl}/portfolio/all`).pipe(
-      map(res => {
-        if (res && res.response) return res.response as PortfolioData;
-        if (res && res.data) return res.data as PortfolioData;
-        return res as PortfolioData;
-      }),
-      catchError(err => {
-        console.warn('API fetch failed, utilizing resilient client fallback cache:', err);
-        return of(this.defaultData);
-      })
-    );
+  getPortfolioData(forceRefresh = false): Observable<PortfolioData> {
+    if (!this.portfolioData$ || forceRefresh) {
+      this.portfolioData$ = this.http.get<any>(`${this.apiUrl}/portfolio/all`).pipe(
+        map(res => {
+          if (res && res.response) return res.response as PortfolioData;
+          if (res && res.data) return res.data as PortfolioData;
+          return res as PortfolioData;
+        }),
+        catchError(err => {
+          console.warn('API fetch failed, utilizing resilient client fallback cache:', err);
+          return of(this.defaultData);
+        }),
+        shareReplay({ bufferSize: 1, refCount: false })
+      );
+    }
+    return this.portfolioData$;
   }
 
   submitContact(req: ContactRequest): Observable<ContactResponse> {
