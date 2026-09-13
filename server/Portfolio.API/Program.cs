@@ -1,6 +1,7 @@
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi;
 using Portfolio.API.Data;
-using Portfolio.API.Endpoints;
 using Portfolio.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,34 @@ builder.Services.AddHttpClient();
 
 // --- Clean OOP Architecture: Convention-Based Auto-Registration ---
 builder.Services.AddAutoRegisteredServices();
+
+// --- Web API Controllers ---
+builder.Services.AddControllers();
+
+// --- Swagger / OpenAPI Configuration ---
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Nitin Pimpalkar - Developer Portfolio API",
+        Version = "v1",
+        Description = "Enterprise RESTful Web API for Nitin Pimpalkar's developer portfolio. Built with ASP.NET Core (.NET 10), Clean OOP Architecture, Generic Repository Pattern, and Unit of Work.",
+        Contact = new OpenApiContact
+        {
+            Name = "Nitin Pimpalkar",
+            Email = "nitinpimpalkar17@gmail.com",
+            Url = new Uri("https://github.com/NitinPim")
+        }
+    });
+
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    if (File.Exists(xmlPath))
+    {
+        options.IncludeXmlComments(xmlPath);
+    }
+});
 
 // --- Cross-Origin Resource Sharing (CORS) ---
 builder.Services.AddCors(options =>
@@ -33,8 +62,6 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
-
-builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
@@ -55,15 +82,18 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// --- HTTP Request Pipeline ---
-if (app.Environment.IsDevelopment())
+// --- Swagger Middleware (Active in both Development & Production for API exploration) ---
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.MapOpenApi();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Nitin Pimpalkar Portfolio API v1");
+    c.RoutePrefix = "swagger";
+    c.DocumentTitle = "Nitin Pimpalkar Portfolio API - Swagger UI";
+});
 
 app.UseCors("AllowAll");
 
-// --- Clean Endpoint Routing (Decoupled from Program.cs) ---
-app.MapPortfolioEndpoints();
+// --- Controller Routing ---
+app.MapControllers();
 
 app.Run();
