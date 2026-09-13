@@ -13,6 +13,8 @@ yarn-error.log*
 # .NET & Visual Studio
 **/bin/
 **/obj/
+**/publish/
+publish/
 .vs/
 *.user
 *.suo

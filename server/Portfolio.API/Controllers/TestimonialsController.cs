@@ -4,10 +4,8 @@ using Portfolio.API.Services;
 
 namespace Portfolio.API.Controllers;
 
-[ApiController]
 [Route("api/[controller]")]
-[Produces("application/json")]
-public class TestimonialsController : ControllerBase
+public class TestimonialsController : BaseApiController
 {
     private readonly IPortfolioService _portfolioService;
 
@@ -17,13 +15,13 @@ public class TestimonialsController : ControllerBase
     }
 
     /// <summary>
-    /// Retrieves client and colleague recommendations.
+    /// Retrieves client and colleague recommendations wrapped in the common ApiResponse model.
     /// </summary>
     [HttpGet]
-    [ProducesResponseType(typeof(IEnumerable<Testimonial>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<Testimonial>>> GetAll()
+    [ProducesResponseType(typeof(ApiResponse<IEnumerable<Testimonial>>), StatusCodes.Status200OK)]
+    public async Task<ActionResult<ApiResponse<IEnumerable<Testimonial>>>> GetAll()
     {
         var testimonials = await _portfolioService.GetAllTestimonialsAsync();
-        return Ok(testimonials);
+        return Success(testimonials, "Testimonials retrieved successfully.");
     }
 }

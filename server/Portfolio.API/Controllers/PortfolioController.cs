@@ -4,10 +4,8 @@ using Portfolio.API.Services;
 
 namespace Portfolio.API.Controllers;
 
-[ApiController]
 [Route("api/[controller]")]
-[Produces("application/json")]
-public class PortfolioController : ControllerBase
+public class PortfolioController : BaseApiController
 {
     private readonly IPortfolioService _portfolioService;
     private readonly ILogger<PortfolioController> _logger;
@@ -19,14 +17,14 @@ public class PortfolioController : ControllerBase
     }
 
     /// <summary>
-    /// Retrieves the entire aggregate portfolio payload (developer info, projects, experiences, educations, testimonials).
+    /// Retrieves the entire aggregate portfolio payload wrapped in the common ApiResponse model.
     /// </summary>
     [HttpGet("all")]
-    [ProducesResponseType(typeof(PortfolioAggregateDto), StatusCodes.Status200OK)]
-    public async Task<ActionResult<PortfolioAggregateDto>> GetAll()
+    [ProducesResponseType(typeof(ApiResponse<PortfolioAggregateDto>), StatusCodes.Status200OK)]
+    public async Task<ActionResult<ApiResponse<PortfolioAggregateDto>>> GetAll()
     {
         _logger.LogInformation("GET api/portfolio/all called.");
         var aggregate = await _portfolioService.GetPortfolioAggregateAsync();
-        return Ok(aggregate);
+        return Success(aggregate, "Portfolio aggregate data retrieved successfully.");
     }
 }

@@ -4,10 +4,8 @@ using Portfolio.API.Services;
 
 namespace Portfolio.API.Controllers;
 
-[ApiController]
 [Route("api/[controller]")]
-[Produces("application/json")]
-public class ContactController : ControllerBase
+public class ContactController : BaseApiController
 {
     private readonly IPortfolioService _portfolioService;
 
@@ -17,18 +15,18 @@ public class ContactController : ControllerBase
     }
 
     /// <summary>
-    /// Submits a new contact form message, persists it to SQL Server, and triggers email dispatch.
+    /// Submits a new contact message and returns the standardized ApiResponse.
     /// </summary>
     [HttpPost]
-    [ProducesResponseType(typeof(ContactResponseDto), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(ContactResponseDto), StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<ContactResponseDto>> Submit([FromBody] ContactDto contactDto)
+    [ProducesResponseType(typeof(ApiResponse<ContactResponseDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<ContactResponseDto>), StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<ApiResponse<ContactResponseDto>>> Submit([FromBody] ContactDto contactDto)
     {
         var result = await _portfolioService.SubmitContactMessageAsync(contactDto);
         if (!result.Success)
         {
-            return BadRequest(result);
+            return Failure<ContactResponseDto>(result.Message, StatusCodes.Status400BadRequest);
         }
-        return Ok(result);
+        return Success(result, result.Message);
     }
 }

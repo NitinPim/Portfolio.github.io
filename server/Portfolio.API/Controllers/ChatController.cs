@@ -1,12 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using Portfolio.API.Models;
 using Portfolio.API.Services;
 
 namespace Portfolio.API.Controllers;
 
-[ApiController]
 [Route("api/[controller]")]
-[Produces("application/json")]
-public class ChatController : ControllerBase
+public class ChatController : BaseApiController
 {
     private readonly IChatService _chatService;
 
@@ -16,19 +15,19 @@ public class ChatController : ControllerBase
     }
 
     /// <summary>
-    /// Processes queries to the interactive portfolio AI assistant.
+    /// Processes inquiries to the interactive AI assistant wrapped in the common ApiResponse model.
     /// </summary>
     [HttpPost]
-    [ProducesResponseType(typeof(ChatResponseDto), StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<ChatResponseDto>> ProcessMessage([FromBody] ChatRequestDto request)
+    [ProducesResponseType(typeof(ApiResponse<ChatResponseDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<ChatResponseDto>), StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<ApiResponse<ChatResponseDto>>> ProcessMessage([FromBody] ChatRequestDto request)
     {
         if (string.IsNullOrWhiteSpace(request?.Message))
         {
-            return BadRequest(new { Reply = "Please enter a message." });
+            return Failure<ChatResponseDto>("Please enter a message.", StatusCodes.Status400BadRequest);
         }
 
         var response = await _chatService.ProcessChatAsync(request);
-        return Ok(response);
+        return Success(response, "Chat message processed successfully.");
     }
 }

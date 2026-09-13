@@ -221,7 +221,12 @@ export class PortfolioService {
   };
 
   getPortfolioData(): Observable<PortfolioData> {
-    return this.http.get<PortfolioData>(`${this.apiUrl}/portfolio/all`).pipe(
+    return this.http.get<any>(`${this.apiUrl}/portfolio/all`).pipe(
+      map(res => {
+        if (res && res.response) return res.response as PortfolioData;
+        if (res && res.data) return res.data as PortfolioData;
+        return res as PortfolioData;
+      }),
       catchError(err => {
         console.warn('API fetch failed, utilizing resilient client fallback cache:', err);
         return of(this.defaultData);
@@ -230,7 +235,12 @@ export class PortfolioService {
   }
 
   submitContact(req: ContactRequest): Observable<ContactResponse> {
-    return this.http.post<ContactResponse>(`${this.apiUrl}/contact`, req).pipe(
+    return this.http.post<any>(`${this.apiUrl}/contact`, req).pipe(
+      map(res => {
+        if (res && res.response) return res.response as ContactResponse;
+        if (res && res.data) return res.data as ContactResponse;
+        return res as ContactResponse;
+      }),
       catchError(err => {
         console.error('Contact submit error:', err);
         return of({
@@ -242,8 +252,13 @@ export class PortfolioService {
   }
 
   askChatbot(message: string, history: { sender: string; text: string }[] = []): Observable<{ reply: string; suggestedQuestions?: string[] }> {
-    return this.http.post<{ reply: string; suggestedQuestions?: string[] }>(`${this.apiUrl}/chat`, { message, history }).pipe(
+    return this.http.post<any>(`${this.apiUrl}/chat`, { message, history }).pipe(
       timeout(8000),
+      map(res => {
+        if (res && res.response) return res.response as { reply: string; suggestedQuestions?: string[] };
+        if (res && res.data) return res.data as { reply: string; suggestedQuestions?: string[] };
+        return res as { reply: string; suggestedQuestions?: string[] };
+      }),
       catchError(err => {
         return of({
           reply: "I am Nitin Pimpalkar's Portfolio Assistant. Nitin is a Junior Software Developer at ThinkerSteps Technologies Pvt. Ltd. based in Nagpur, India (B.Tech '24 graduate) specializing in C#, ASP.NET Core, SQL Server, and Angular.",

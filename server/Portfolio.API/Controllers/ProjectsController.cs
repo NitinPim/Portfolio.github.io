@@ -4,10 +4,8 @@ using Portfolio.API.Services;
 
 namespace Portfolio.API.Controllers;
 
-[ApiController]
 [Route("api/[controller]")]
-[Produces("application/json")]
-public class ProjectsController : ControllerBase
+public class ProjectsController : BaseApiController
 {
     private readonly IPortfolioService _portfolioService;
 
@@ -17,29 +15,29 @@ public class ProjectsController : ControllerBase
     }
 
     /// <summary>
-    /// Retrieves all showcase projects ordered by display priority.
+    /// Retrieves all showcase projects wrapped in the common ApiResponse model.
     /// </summary>
     [HttpGet]
-    [ProducesResponseType(typeof(IEnumerable<Project>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<Project>>> GetAll()
+    [ProducesResponseType(typeof(ApiResponse<IEnumerable<Project>>), StatusCodes.Status200OK)]
+    public async Task<ActionResult<ApiResponse<IEnumerable<Project>>>> GetAll()
     {
         var projects = await _portfolioService.GetAllProjectsAsync();
-        return Ok(projects);
+        return Success(projects, "Projects retrieved successfully.");
     }
 
     /// <summary>
     /// Retrieves a single project by its unique identifier.
     /// </summary>
     [HttpGet("{id:int}")]
-    [ProducesResponseType(typeof(Project), StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<Project>> GetById(int id)
+    [ProducesResponseType(typeof(ApiResponse<Project>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<Project>), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<ApiResponse<Project>>> GetById(int id)
     {
         var project = await _portfolioService.GetProjectByIdAsync(id);
         if (project is null)
         {
-            return NotFound(new { Message = $"Project with ID {id} not found." });
+            return Failure<Project>($"Project with ID {id} was not found.", StatusCodes.Status404NotFound);
         }
-        return Ok(project);
+        return Success(project, "Project retrieved successfully.");
     }
 }

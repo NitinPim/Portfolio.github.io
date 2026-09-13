@@ -4,10 +4,8 @@ using Portfolio.API.Services;
 
 namespace Portfolio.API.Controllers;
 
-[ApiController]
 [Route("api/[controller]")]
-[Produces("application/json")]
-public class ExperiencesController : ControllerBase
+public class ExperiencesController : BaseApiController
 {
     private readonly IPortfolioService _portfolioService;
 
@@ -17,13 +15,13 @@ public class ExperiencesController : ControllerBase
     }
 
     /// <summary>
-    /// Retrieves full career experience timeline ordered chronologically.
+    /// Retrieves full career experience timeline wrapped in the common ApiResponse model.
     /// </summary>
     [HttpGet]
-    [ProducesResponseType(typeof(IEnumerable<Experience>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<Experience>>> GetAll()
+    [ProducesResponseType(typeof(ApiResponse<IEnumerable<Experience>>), StatusCodes.Status200OK)]
+    public async Task<ActionResult<ApiResponse<IEnumerable<Experience>>>> GetAll()
     {
         var experiences = await _portfolioService.GetAllExperiencesAsync();
-        return Ok(experiences);
+        return Success(experiences, "Experiences retrieved successfully.");
     }
 }
